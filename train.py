@@ -428,10 +428,10 @@ def main():
                     if best_val_PQ < PQ:
                         best_val_PQ = PQ
                         torch.save({
-                            'epoch': current_epoch,
+                            'epoch': epoch,
                             'model_state_dict': my_model.state_dict(),
                             'optimizer_state_dict': optimizer.state_dict(),
-                            'scheduler_state_dict': scheduler.state_dict() if scheduler else None,
+                            'scheduler_state_dict': scheduler_steplr.state_dict() if scheduler_steplr else None,
                             'best_val_PQ': best_val_PQ,
                         }, model_save_path)
                     ## 2. only save the model weights and bias
