@@ -3,3 +3,6 @@
 data/
 lcps/
 dataloader/*
+*.pyc
+*.nbc
+*.nbi
