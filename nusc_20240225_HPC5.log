@@ -1,0 +1,52 @@
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-trainval', 'path': './data/nuscenes', 'sample_pkl_path': './data/nuscenes/pkl_files', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'inst_aug': {'if_use': False, 'aug_type': 'contmix', 'inst_pkl_path': './data/nuscenes/inst_database_train_info.pkl', 'inst_trans': True, 'inst_rotate': True, 'inst_flip': True, 'inst_add': True}, 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nu_8k2b4l_e13.pt', 'model_save_path': './nu_8k2b4l.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+epoch: 1   lr: 0.00400
+
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :  10.98%   64.87%   16.93%   55.02%
+             bicycle :   0.00%    0.00%    0.00%    0.01%
+                 bus :   0.19%   72.85%    0.26%    7.20%
+                 car :  55.44%   83.07%   66.74%   78.46%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :   1.89%   70.24%    2.69%    2.08%
+          pedestrian :  58.74%   84.79%   69.27%   41.08%
+        traffic_cone :  26.36%   78.44%   33.60%   12.83%
+             trailer :   0.59%   76.33%    0.78%    1.93%
+               truck :  10.92%   75.01%   14.55%   32.30%
+   driveable_surface :  87.11%   87.26%   99.83%   87.89%
+          other_flat :   5.66%   61.95%    9.13%   21.69%
+            sidewalk :  18.22%   64.08%   28.43%   39.29%
+             terrain :   8.48%   58.98%   14.38%   39.41%
+             manmade :  59.81%   73.48%   81.41%   70.48%
+          vegetation :  42.78%   65.42%   65.39%   56.67%
+PQ 24.2  PQ_dagger  36.0  SQ 63.5  RQ 31.5  |  PQ_th 16.5  SQ_th 60.6  RQ_th 20.5  |  PQ_st 37.0  SQ_st 68.5  RQ_st 49.8  |  mIoU 34.1
+Current val PQ is 24.2 while the best val PQ is 24.2
+Current val miou is 34.1
+epoch 1 iter  3516, avg_loss: 5.3, semantic loss: 1.1, center loss: 0.9, offset loss: 0.3, instmap loss: 0.7, pix loss: 2.3
+
+Validation per class iou: 
+barrier : 50.76%
+bicycle : 0.32%
+bus : 15.12%
+car : 74.58%
+construction_vehicle : 0.14%
+motorcycle : 7.14%
+pedestrian : 38.49%
+traffic_cone : 25.48%
+trailer : 4.10%
+truck : 25.72%
+driveable_surface : 87.89%
+other_flat : 21.69%
+sidewalk : 39.29%
+terrain : 39.40%
+manmade : 69.99%
+vegetation : 56.69%
+Current val miou is 34.8
