@@ -15,8 +15,8 @@ class PanopticEval:
     self.ignore = np.array(ignore, dtype=np.int64)
     self.include = np.array([n for n in range(self.n_classes) if n not in self.ignore], dtype=np.int64)
 
-    print("[PANOPTIC EVAL] IGNORE: ", self.ignore)
-    print("[PANOPTIC EVAL] INCLUDE: ", self.include)
+    # print("[PANOPTIC EVAL] IGNORE: ", self.ignore)
+    # print("[PANOPTIC EVAL] INCLUDE: ", self.include)
 
     self.reset()
     self.offset = offset  # largest number of instances in a given scan
