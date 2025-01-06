@@ -8746,3 +8746,45 @@ terrain : 74.17%
 manmade : 89.62%
 vegetation : 87.68%
 Current val miou is 76.8
+epoch: 209   lr: 0.00050
+
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :  71.53%   83.36%   85.80%   77.83%
+             bicycle :  64.18%   84.10%   76.31%   40.30%
+                 bus :  74.48%   93.78%   79.42%   90.73%
+                 car :  93.13%   95.70%   97.31%   94.30%
+construction_vehicle :  49.54%   86.27%   57.42%   49.63%
+          motorcycle :  83.89%   91.61%   91.57%   75.39%
+          pedestrian :  90.97%   93.17%   97.64%   80.97%
+        traffic_cone :  89.03%   92.16%   96.60%   70.01%
+             trailer :  58.51%   88.31%   66.25%   66.13%
+               truck :  72.31%   93.39%   77.42%   84.47%
+   driveable_surface :  96.47%   96.55%   99.92%   96.71%
+          other_flat :  51.22%   84.82%   60.39%   71.98%
+            sidewalk :  69.42%   81.05%   85.65%   75.01%
+             terrain :  51.45%   77.89%   66.06%   74.49%
+             manmade :  87.51%   88.77%   98.57%   90.01%
+          vegetation :  83.30%   86.70%   96.09%   87.60%
+PQ 74.2  PQ_dagger  79.0  SQ 88.6  RQ 83.3  |  PQ_th 74.8  SQ_th 90.2  RQ_th 82.6  |  PQ_st 73.2  SQ_st 86.0  RQ_st 84.4  |  mIoU 76.6
+Current val PQ is 74.2 while the best val PQ is 74.5
+Current val miou is 76.6
+epoch 209 iter  2812, avg_loss: 2.8, semantic loss: 0.2, center loss: 0.4, offset loss: 0.0, instmap loss: 0.1, pix loss: 2.1
+
+Validation per class iou: 
+barrier : 76.66%
+bicycle : 42.75%
+bus : 92.03%
+car : 92.99%
+construction_vehicle : 49.97%
+motorcycle : 83.98%
+pedestrian : 81.12%
+traffic_cone : 68.32%
+trailer : 62.53%
+truck : 82.70%
+driveable_surface : 96.72%
+other_flat : 71.94%
+sidewalk : 74.99%
+terrain : 74.48%
+manmade : 89.66%
+vegetation : 87.70%
+Current val miou is 76.8
