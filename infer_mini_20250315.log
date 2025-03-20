@@ -1,0 +1,398 @@
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [100, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nusc_79.8.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [100, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': './nusc_79.8.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :   0.00%    0.00%    0.00%    0.00%
+                 bus :   0.00%    0.00%    0.00%    0.00%
+                 car :   0.00%    0.00%    0.00%    0.00%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :   0.00%    0.00%    0.00%    0.00%
+          pedestrian :   0.00%    0.00%    0.00%    0.00%
+        traffic_cone :   0.00%    0.00%    0.00%    0.00%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :   0.00%    0.00%    0.00%    0.00%
+   driveable_surface :   0.00%    0.00%    0.00%    0.00%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :   0.00%    0.00%    0.00%    0.00%
+             terrain :   0.00%    0.00%    0.00%    0.00%
+             manmade :   0.00%    0.00%    0.00%    0.00%
+          vegetation :   0.00%    0.00%    0.00%    0.00%
+PQ 0.000  PQ_dagger  0.000  SQ 0.000  RQ 0.000  |  PQ_th 0.000  SQ_th 0.000  RQ_th 0.000  |  PQ_st 0.000  SQ_st 0.000  RQ_st 0.000  |  mIoU 0.000
+Current val PQ is 0.000
+Current val miou is 0.000
+Validation per class iou: 
+barrier : nan%
+bicycle : 0.03%
+bus : 0.00%
+car : 0.00%
+construction_vehicle : nan%
+motorcycle : 0.00%
+pedestrian : 0.00%
+traffic_cone : 0.00%
+trailer : 0.00%
+truck : 0.00%
+driveable_surface : 0.00%
+other_flat : 0.00%
+sidewalk : 0.00%
+terrain : 0.00%
+manmade : 0.00%
+vegetation : 0.00%
+Current val miou is 0.002
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_debug_0315.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :   0.00%    0.00%    0.00%    0.00%
+                 bus :   0.00%    0.00%    0.00%    0.00%
+                 car :   0.00%    0.00%    0.00%    0.00%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :   0.00%    0.00%    0.00%    0.00%
+          pedestrian :   0.00%    0.00%    0.00%    0.00%
+        traffic_cone :   0.00%    0.00%    0.00%    0.00%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :   0.00%    0.00%    0.00%    0.00%
+   driveable_surface :   0.00%    0.00%    0.00%    0.00%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :   0.00%    0.00%    0.00%    0.00%
+             terrain :   0.00%    0.00%    0.00%    0.00%
+             manmade :   0.00%    0.00%    0.00%    0.00%
+          vegetation :   0.00%    0.00%    0.00%    0.00%
+PQ 0.000  PQ_dagger  0.000  SQ 0.000  RQ 0.000  |  PQ_th 0.000  SQ_th 0.000  RQ_th 0.000  |  PQ_st 0.000  SQ_st 0.000  RQ_st 0.000  |  mIoU 0.000
+Current val PQ is 0.000
+Current val miou is 0.000
+Validation per class iou: 
+barrier : nan%
+bicycle : 0.00%
+bus : 0.00%
+car : 0.00%
+construction_vehicle : nan%
+motorcycle : 0.00%
+pedestrian : 0.00%
+traffic_cone : 0.00%
+trailer : nan%
+truck : 0.00%
+driveable_surface : 0.00%
+other_flat : 0.00%
+sidewalk : 0.00%
+terrain : 0.00%
+manmade : 0.00%
+vegetation : 0.00%
+Current val miou is 0.000
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_debug_0315.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :   9.63%   86.67%   11.11%    1.21%
+                 bus :  27.96%   73.56%   38.02%   52.88%
+                 car :  72.30%   85.72%   84.34%   82.77%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  21.17%   67.74%   31.25%   21.91%
+          pedestrian :  70.23%   87.27%   80.47%   46.68%
+        traffic_cone :   0.00%    0.00%    0.00%    0.88%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  29.86%   86.87%   34.38%   46.51%
+   driveable_surface :  86.66%   86.66%  100.00%   86.80%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  20.76%   58.70%   35.37%   38.52%
+             terrain :  36.07%   65.02%   55.47%   58.60%
+             manmade :  66.10%   77.59%   85.19%   77.34%
+          vegetation :  62.85%   70.70%   88.89%   72.88%
+PQ 31.474  PQ_dagger  36.863  SQ 52.905  RQ 40.281  |  PQ_th 23.115  SQ_th 48.781  RQ_th 27.957  |  PQ_st 45.405  SQ_st 59.777  RQ_st 60.820  |  mIoU 36.686
+Current val PQ is 31.474
+Current val miou is 36.686
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 0.94%
+bus : 38.15%
+car : 82.45%
+construction_vehicle : 0.00%
+motorcycle : 23.94%
+pedestrian : 51.19%
+traffic_cone : 0.67%
+trailer : 0.00%
+truck : 35.85%
+driveable_surface : 86.79%
+other_flat : 0.00%
+sidewalk : 38.51%
+terrain : 58.58%
+manmade : 77.76%
+vegetation : 72.85%
+Current val miou is 35.480
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'val_batch_size': 2, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_debug_0315.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_debug_0315.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  15.38%  100.00%   15.38%    0.29%
+                 bus :  46.08%   85.58%   53.85%   48.81%
+                 car :  80.44%   88.60%   90.80%   85.74%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  11.23%   74.89%   15.00%   10.43%
+          pedestrian :  73.63%   89.39%   82.37%   41.60%
+        traffic_cone :  10.53%  100.00%   10.53%    1.35%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  38.54%   85.17%   45.26%   46.42%
+   driveable_surface :  89.47%   89.47%  100.00%   89.37%
+          other_flat :   0.00%    0.00%    0.00%    0.01%
+            sidewalk :  31.90%   65.12%   48.98%   42.86%
+             terrain :  33.09%   67.68%   48.89%   60.05%
+             manmade :  71.26%   80.16%   88.89%   80.79%
+          vegetation :  70.74%   77.43%   91.36%   77.98%
+PQ 35.8  PQ_dagger  41.0  SQ 62.7  RQ 43.2  |  PQ_th 27.6  SQ_th 62.4  RQ_th 31.3  |  PQ_st 49.4  SQ_st 63.3  RQ_st 63.0  |  mIoU 36.6
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 0.31%
+bus : 40.35%
+car : 85.58%
+construction_vehicle : 0.00%
+motorcycle : 16.37%
+pedestrian : 50.76%
+traffic_cone : 2.12%
+trailer : 0.00%
+truck : 40.36%
+driveable_surface : 89.35%
+other_flat : 0.01%
+sidewalk : 42.85%
+terrain : 60.05%
+manmade : 81.45%
+vegetation : 77.92%
+Current val miou is 36.7
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_debug_0315.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  15.38%  100.00%   15.38%    0.29%
+                 bus :  46.08%   85.58%   53.85%   48.81%
+                 car :  80.44%   88.60%   90.80%   85.74%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  11.23%   74.89%   15.00%   10.43%
+          pedestrian :  73.63%   89.39%   82.37%   41.60%
+        traffic_cone :  10.53%  100.00%   10.53%    1.35%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  38.54%   85.17%   45.26%   46.42%
+   driveable_surface :  89.47%   89.47%  100.00%   89.37%
+          other_flat :   0.00%    0.00%    0.00%    0.01%
+            sidewalk :  31.90%   65.12%   48.98%   42.86%
+             terrain :  33.09%   67.68%   48.89%   60.05%
+             manmade :  71.26%   80.16%   88.89%   80.79%
+          vegetation :  70.74%   77.43%   91.36%   77.98%
+PQ 35.769  PQ_dagger  40.982  SQ 62.718  RQ 43.206  |  PQ_th 27.584  SQ_th 62.362  RQ_th 31.318  |  PQ_st 49.409  SQ_st 63.312  RQ_st 63.019  |  mIoU 36.606
+Current val PQ is 35.769
+Current val miou is 36.606
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 0.31%
+bus : 40.35%
+car : 85.58%
+construction_vehicle : 0.00%
+motorcycle : 16.37%
+pedestrian : 50.76%
+traffic_cone : 2.12%
+trailer : 0.00%
+truck : 40.36%
+driveable_surface : 89.35%
+other_flat : 0.01%
+sidewalk : 42.85%
+terrain : 60.05%
+manmade : 81.45%
+vegetation : 77.92%
+Current val miou is 36.717
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  60.03%   93.80%   64.00%   48.07%
+                 bus :  86.46%   97.27%   88.89%   95.23%
+                 car :  93.70%   94.99%   98.65%   93.18%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  71.69%   87.50%   81.93%   59.19%
+          pedestrian :  90.21%   92.16%   97.89%   82.99%
+        traffic_cone :  84.45%   87.97%   96.00%   46.79%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  73.53%   94.94%   77.46%   75.51%
+   driveable_surface :  94.06%   94.06%  100.00%   93.82%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  56.29%   79.84%   70.50%   63.13%
+             terrain :  62.00%   76.31%   81.25%   79.06%
+             manmade :  88.08%   88.08%  100.00%   92.06%
+          vegetation :  91.43%   91.43%  100.00%   90.10%
+PQ 59.496  PQ_dagger  61.862  SQ 67.396  RQ 66.035  |  PQ_th 56.009  SQ_th 64.863  RQ_th 60.481  |  PQ_st 65.309  SQ_st 71.618  RQ_st 75.292  |  mIoU 57.446
+Current val PQ is 59.496
+Current val miou is 57.446
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 38.75%
+bus : 95.37%
+car : 93.31%
+construction_vehicle : 0.00%
+motorcycle : 69.06%
+pedestrian : 81.92%
+traffic_cone : 40.52%
+trailer : 0.00%
+truck : 75.08%
+driveable_surface : 93.81%
+other_flat : 0.00%
+sidewalk : 63.12%
+terrain : 79.03%
+manmade : 92.02%
+vegetation : 90.08%
+Current val miou is 57.005
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  60.03%   93.80%   64.00%   48.07%
+                 bus :  86.46%   97.27%   88.89%   95.23%
+                 car :  93.70%   94.99%   98.65%   93.18%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  71.69%   87.50%   81.93%   59.19%
+          pedestrian :  90.21%   92.16%   97.89%   82.99%
+        traffic_cone :  84.45%   87.97%   96.00%   46.79%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  73.53%   94.94%   77.46%   75.51%
+   driveable_surface :  94.06%   94.06%  100.00%   93.82%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  56.29%   79.84%   70.50%   63.13%
+             terrain :  62.00%   76.31%   81.25%   79.06%
+             manmade :  88.08%   88.08%  100.00%   92.06%
+          vegetation :  91.43%   91.43%  100.00%   90.10%
+PQ 59.496  PQ_dagger  61.862  SQ 67.396  RQ 66.035  |  PQ_th 56.009  SQ_th 64.863  RQ_th 60.481  |  PQ_st 65.309  SQ_st 71.618  RQ_st 75.292  |  mIoU 57.446
+Current val PQ is 59.496
+Current val miou is 57.446
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 38.75%
+bus : 95.37%
+car : 93.31%
+construction_vehicle : 0.00%
+motorcycle : 69.06%
+pedestrian : 81.92%
+traffic_cone : 40.52%
+trailer : 0.00%
+truck : 75.08%
+driveable_surface : 93.81%
+other_flat : 0.00%
+sidewalk : 63.12%
+terrain : 79.03%
+manmade : 92.02%
+vegetation : 90.08%
+Current val miou is 57.005
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  60.03%   93.80%   64.00%   48.07%
+                 bus :  86.46%   97.27%   88.89%   95.23%
+                 car :  93.70%   94.99%   98.65%   93.18%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  71.69%   87.50%   81.93%   59.19%
+          pedestrian :  90.21%   92.16%   97.89%   82.99%
+        traffic_cone :  84.45%   87.97%   96.00%   46.79%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  73.53%   94.94%   77.46%   75.51%
+   driveable_surface :  94.06%   94.06%  100.00%   93.82%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  56.29%   79.84%   70.50%   63.13%
+             terrain :  62.00%   76.31%   81.25%   79.06%
+             manmade :  88.08%   88.08%  100.00%   92.06%
+          vegetation :  91.43%   91.43%  100.00%   90.10%
+PQ 59.496  PQ_dagger  61.862  SQ 67.396  RQ 66.035  |  PQ_th 56.009  SQ_th 64.863  RQ_th 60.481  |  PQ_st 65.309  SQ_st 71.618  RQ_st 75.292  |  mIoU 57.446
+Current val PQ is 59.496
+Current val miou is 57.446
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 38.75%
+bus : 95.37%
+car : 93.31%
+construction_vehicle : 0.00%
+motorcycle : 69.06%
+pedestrian : 81.92%
+traffic_cone : 40.52%
+trailer : 0.00%
+truck : 75.08%
+driveable_surface : 93.81%
+other_flat : 0.00%
+sidewalk : 63.12%
+terrain : 79.03%
+manmade : 92.02%
+vegetation : 90.08%
+Current val miou is 57.005
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  60.03%   93.80%   64.00%   48.07%
+                 bus :  86.46%   97.27%   88.89%   95.23%
+                 car :  93.70%   94.99%   98.65%   93.18%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  71.69%   87.50%   81.93%   59.19%
+          pedestrian :  90.21%   92.16%   97.89%   82.99%
+        traffic_cone :  84.45%   87.97%   96.00%   46.79%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  73.53%   94.94%   77.46%   75.51%
+   driveable_surface :  94.06%   94.06%  100.00%   93.82%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  56.29%   79.84%   70.50%   63.13%
+             terrain :  62.00%   76.31%   81.25%   79.06%
+             manmade :  88.08%   88.08%  100.00%   92.06%
+          vegetation :  91.43%   91.43%  100.00%   90.10%
+PQ 59.496  PQ_dagger  61.862  SQ 67.396  RQ 66.035  |  PQ_th 56.009  SQ_th 64.863  RQ_th 60.481  |  PQ_st 65.309  SQ_st 71.618  RQ_st 75.292  |  mIoU 57.446
+Current val PQ is 59.496
+Current val miou is 57.446
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 38.75%
+bus : 95.37%
+car : 93.31%
+construction_vehicle : 0.00%
+motorcycle : 69.06%
+pedestrian : 81.92%
+traffic_cone : 40.52%
+trailer : 0.00%
+truck : 75.08%
+driveable_surface : 93.81%
+other_flat : 0.00%
+sidewalk : 63.12%
+terrain : 79.03%
+manmade : 92.02%
+vegetation : 90.08%
+Current val miou is 57.005
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+{'model_name': 'lcps', 'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': 'data/nuscenes_mini', 'sample_pkl_path': 'data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'num_worker': 4, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': 'checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nu_8xbs2_NSCC.pt', 'val_batch_size': 2, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}}}
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :  60.03%   93.80%   64.00%   48.07%
+                 bus :  86.46%   97.27%   88.89%   95.23%
+                 car :  93.70%   94.99%   98.65%   93.18%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :  71.69%   87.50%   81.93%   59.19%
+          pedestrian :  90.21%   92.16%   97.89%   82.99%
+        traffic_cone :  84.45%   87.97%   96.00%   46.79%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :  73.53%   94.94%   77.46%   75.51%
+   driveable_surface :  94.06%   94.06%  100.00%   93.82%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :  56.29%   79.84%   70.50%   63.13%
+             terrain :  62.00%   76.31%   81.25%   79.06%
+             manmade :  88.08%   88.08%  100.00%   92.06%
+          vegetation :  91.43%   91.43%  100.00%   90.10%
+PQ 59.496  PQ_dagger  61.862  SQ 67.396  RQ 66.035  |  PQ_th 56.009  SQ_th 64.863  RQ_th 60.481  |  PQ_st 65.309  SQ_st 71.618  RQ_st 75.292  |  mIoU 57.446
+Current val PQ is 59.496
+Current val miou is 57.446
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 38.75%
+bus : 95.37%
+car : 93.31%
+construction_vehicle : 0.00%
+motorcycle : 69.06%
+pedestrian : 81.92%
+traffic_cone : 40.52%
+trailer : 0.00%
+truck : 75.08%
+driveable_surface : 93.81%
+other_flat : 0.00%
+sidewalk : 63.12%
+terrain : 79.03%
+manmade : 92.02%
+vegetation : 90.08%
+Current val miou is 57.005
