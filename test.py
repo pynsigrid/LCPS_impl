@@ -111,7 +111,7 @@ def main():
             weights_dict[new_k] = v
         # # debug的时候查看参数量
         # model_dict = my_model.state_dict()
-        my_model.load_state_dict(weights_dict)
+        my_model.load_state_dict(weights_dict, strict=False) #NOTE-YINING: strict=False for temporary compatibility
 
 
     # DDP的sync_bn，让多卡训练的bn范围正常

@@ -54,7 +54,7 @@ def main():
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('-c', '--configs', default='configs/pa_po_nuscenes.yaml')
     parser.add_argument('-l', '--logdir', default='train.log')
-    parser.add_argument("--local_rank", default=-1, type=int)
+    parser.add_argument("--local-rank", default=-1, type=int)
     parser.add_argument('-r', "--resume", action="store_true", default=False)
     args = parser.parse_args()
     print(os.environ)
@@ -116,46 +116,19 @@ def main():
 
     my_model = ptBEVnet(cfgs, nclasses)
 
-    ################ old version of loading model ################
-    # # 加载模型
-    # if args.resume:
-    #     pretrained_model = torch.load(model_load_path, map_location=torch.device('cpu'))
-    #     # 消除分布式训练时在保存参数的时候多出来的module.
-    #     weights_dict = {}
-    #     for k, v in pretrained_model.items():
-    #         new_k = k.replace('module.', '') if 'module' in k else k
-    #         weights_dict[new_k] = v
-    #     # # debug的时候查看参数量
-    #     # model_dict = my_model.state_dict()
-    #     my_model.load_state_dict(weights_dict, strict=False)
-    #     print(f'load checkpoint file {model_load_path}')
-    #############################################################
+    # 加载模型
     if args.resume:
-        checkpoint = torch.load(model_load_path, map_location=torch.device('cpu'))
-        
-        # 加载模型权重
+        pretrained_model = torch.load(model_load_path, map_location=torch.device('cpu'))
+        # 消除分布式训练时在保存参数的时候多出来的module.
         weights_dict = {}
-        for k, v in checkpoint['model_state_dict'].items():
+        for k, v in pretrained_model.items():
             new_k = k.replace('module.', '') if 'module' in k else k
             weights_dict[new_k] = v
+        # # debug的时候查看参数量
+        # model_dict = my_model.state_dict()
         my_model.load_state_dict(weights_dict, strict=False)
+        print(f'load checkpoint file {model_load_path}')
 
-        # 加载optimizer和scheduler状态
-        if 'optimizer_state_dict' in checkpoint:
-            optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        if 'scheduler_state_dict' in checkpoint:
-            scheduler_steplr.load_state_dict(checkpoint['scheduler_state_dict'])
-
-        # 加载其他训练信息
-        if 'best_val_PQ' in checkpoint:
-            best_val_PQ = checkpoint['best_val_PQ']
-        if 'epoch' in checkpoint:
-            epoch = checkpoint['epoch'] + 1
-    else:
-        epoch = 0
-        best_val_PQ = float('-inf')
-    
-    
     # DDP的sync_bn，让多卡训练的bn范围正常
     if args.local_rank != -1:
         my_model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(my_model)
@@ -226,8 +199,8 @@ def main():
         learning_map = nuscenesyaml['learning_map']
 
     # training
-    # epoch = 0
-    # best_val_PQ = 0
+    epoch = 0
+    best_val_PQ = 0
     start_training = False
     my_model.train()
     global_iter = 0
@@ -419,20 +392,9 @@ def main():
                     ######################################################################################################
                     
                     # save model if performance is improved
-                    ## 1. save the whole model
                     if best_val_PQ < PQ:
                         best_val_PQ = PQ
-                        torch.save({
-                            'epoch': epoch,
-                            'model_state_dict': my_model.state_dict(),
-                            'optimizer_state_dict': optimizer.state_dict(),
-                            'scheduler_state_dict': scheduler_steplr.state_dict() if scheduler_steplr else None,
-                            'best_val_PQ': best_val_PQ,
-                        }, model_save_path)
-                    ## 2. only save the model weights and bias
-                    # if best_val_PQ < PQ:
-                    #     best_val_PQ = PQ
-                    #     torch.save(my_model.state_dict(), model_save_path)
+                        torch.save(my_model.state_dict(), model_save_path)
                     
                     logger_msg2 = 'Current val PQ is %.1f while the best val PQ is %.1f' %(
                             PQ * 100, best_val_PQ * 100)
