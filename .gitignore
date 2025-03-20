@@ -6,5 +6,7 @@ dataloader/*
 **.pyc
 **.nbc
 **.nbi
+**.npy
+**.npz
 dataloader/__pycache__/process_panoptic_ori.cpython-38.pyc
 dataloader/__pycache__/__init__.cpython-38.pyc
