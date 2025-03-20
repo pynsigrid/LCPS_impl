@@ -47,17 +47,12 @@ def load_pretrained_model(model, pretrained_model):
     model.load_state_dict(model_dict)
     return model
 
-time_list = {}
+
 def main():
-    ######################################################################################################
-    # calculate FPS
-    import time
-    t0 = time.time()
-    ######################################################################################################
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('-c', '--configs', default='configs/pa_po_nuscenes_val.yaml')
     parser.add_argument('-l', '--logdir', default='val.log')
-    parser.add_argument("--local-rank", default=-1, type=int)
+    parser.add_argument("--local_rank", default=0, type=int)
     parser.add_argument('-r', "--resume", action="store_true", default=False)
     args = parser.parse_args()
 
@@ -97,7 +92,7 @@ def main():
     pix_fusion = cfgs['model']['pix_fusion']
     min_points = cfgs['dataset']['min_points']
 
-    if_export_npz = False
+    if_export_npz = True
     
     # 初始化类别名称和数量.抛弃noise类，剩下类别从0开始对齐。
     unique_label, unique_label_str = collate_dataset_info(cfgs)
@@ -110,16 +105,14 @@ def main():
     # 加载模型
     if args.resume:
         print(f'load resumed checkpoints from {model_load_path}')
-        pretrained_model = torch.load(model_load_path, map_location=torch.device('cpu'))
-        # 消除分布式训练时在保存参数的时候多出来的module.
+        checkpoint = torch.load(model_load_path, map_location=torch.device('cpu'))
+        
+        # 加载模型权重
         weights_dict = {}
-        for k, v in pretrained_model.items():
+        for k, v in checkpoint['model_state_dict'].items():
             new_k = k.replace('module.', '') if 'module' in k else k
             weights_dict[new_k] = v
-        # # debug的时候查看参数量
-        # model_dict = my_model.state_dict()
         my_model.load_state_dict(weights_dict, strict=False)
-
 
     # DDP的sync_bn，让多卡训练的bn范围正常
     if args.local_rank != -1:
@@ -165,27 +158,18 @@ def main():
     # val set
     if args.local_rank == 0 or args.local_rank == -1:
         if datasetname == "nuscenes":
-            if os.path.exists("./semantic_val_preds/"):
+            if os.path.exists("./lcps_ASTAR_742/"):
                 print("=> removing old semantic_val_preds")
-                os.system("rm -rf ./semantic_val_preds")    
+                os.system("rm -rf ./lcps_ASTAR_742")  
+              
             if os.path.exists("./panoptic_val_preds/"):
                 print("=> removing old panoptic_val_preds")
                 os.system("rm -rf ./panoptic_val_preds")
-            os.mkdir("semantic_val_preds")
-            os.mkdir("semantic_val_preds/lidarseg")
-            os.mkdir("semantic_val_preds/lidarseg/val")
-            os.mkdir("semantic_val_preds/val/")
-            with open("./semantic_val_preds/val/submission.json", "w") as f:
-                lidarseg_meta={
-                    "meta": 
-                        {"use_camera": True,
-                        "use_lidar": True,
-                        "use_radar": False,
-                        "use_map": False,
-                        "use_external": False}
-                    }
-                json.dump(lidarseg_meta, f)
-
+                
+            os.mkdir("lcps_ASTAR_742")
+            os.mkdir("lcps_ASTAR_742/semantic")
+            os.mkdir("lcps_ASTAR_742/instance")
+            
             os.mkdir("panoptic_val_preds")
             os.mkdir("panoptic_val_preds/panoptic")
             os.mkdir("panoptic_val_preds/panoptic/val")
@@ -201,6 +185,7 @@ def main():
                         "use_external": False}
                     }
                 json.dump(panoseg_meta, f)
+            
         elif datasetname == 'SemanticKitti':
             if os.path.exists("./sequences/"):
                 print("=> removing old kitti sequences preds")
@@ -230,47 +215,6 @@ def main():
         print(f"=> Start Evaluation...")    
     with torch.no_grad():
         for i_iter_val, val_dict in enumerate(val_dataset_loader):
-            # #####################################################################################################
-            # FPS: method-1
-            # if i_iter_val % 10 == 0 and i_iter_val != 0:
-            #     t1 = time.time()
-            #     print('************************************')
-            #     print(f"FPS at {i_iter_val}: {i_iter_val / (t1 - t0)}")
-            #     print('************************************')
-                
-            # if i_iter_val == 2000:
-            #     t11 = time.time()
-            #     print('************************************')
-            #     print(f"FPS #1: {i_iter_val / (t11 - t0)}")
-            #     print('************************************')
-            #     break
-            # #####################################################################################################
-            
-            ######################################################################################################
-            # FPS: method-2
-            t1 = time.time()
-            if 'data_time' not in time_list:
-                time_list['data_time'] = []
-            time_list['data_time'].append(t1 - t0)
-            
-            if i_iter_val == 2000:
-                # calculate FPS
-                t11 = time.time()
-                print('************************************')
-                print(f"FPS total: {i_iter_val / (t11 - t0)}")
-                # print(time_list['data_time'])
-                d = sum(time_list['data_time']) / len(time_list['data_time'])
-                print("FPS data: ", 1 / d)
-                m = sum(time_list['model_time']) / len(time_list['model_time'])
-                print("FPS model: ", 1 / m)
-                p = sum(time_list['post_time']) / len(time_list['post_time'])
-                print("FPS post: ", 1 / p)
-                
-                # np.savez('time_list.npy', time_list)
-                torch.save(time_list, 'time_list_mm.pth')
-                print('************************************')
-                break
-            ######################################################################################################
             val_dict['voxel_label'] = SemKITTI2train(torch.from_numpy(val_dict['voxel_label']))
             val_dict['voxel_label'] = val_dict['voxel_label'].type(torch.LongTensor).cuda()
             val_dict['gt_center'] = torch.from_numpy(val_dict['gt_center']).cuda()
@@ -288,20 +232,11 @@ def main():
                 val_dict['masks'] = [torch.from_numpy(i).cuda() for i in val_dict['masks']]
                 val_dict['valid_mask'] = [torch.from_numpy(i).cuda() for i in val_dict['valid_mask']]
 
-            
             predict_labels, center, offset, instmap, _, cam = my_model(val_dict)
             predict_labels_sem = torch.argmax(predict_labels, dim=1)
             predict_labels_sem = predict_labels_sem.cpu().detach().numpy()
             predict_labels_sem = predict_labels_sem + 1
 
-            ######################################################################################################
-            # FPS: method-2
-            t2 = time.time()
-            if 'model_time' not in time_list:
-                time_list['model_time'] = []
-            time_list['model_time'].append(t2 - t1)
-            ######################################################################################################
-            
             val_grid = [i.cpu().numpy() for i in val_dict['pol_voxel_ind']]
             val_pt_labels = val_dict['pt_sem_label']
             val_pt_inst = val_dict['pt_ins_label']
@@ -372,37 +307,33 @@ def main():
                         
                     elif datasetname == 'nuscenes':
                         lidar_token = val_dict["lidar_token"][count]
-                        lidarseg_bin_file_path = lidar_token + '_lidarseg.bin'
-                        lidarseg_bin_file_path = os.path.join("semantic_val_preds/lidarseg/val", lidarseg_bin_file_path )
+                        lidarseg_bin_file_path = lidar_token + '.npy' # change to npz for uniformity
+                        lidarseg_bin_file_path = os.path.join("lcps_ASTAR_742/semantic", lidarseg_bin_file_path )
+                        instance_bin_file_path = lidar_token + '.npy'
+                        instance_bin_file_path = os.path.join("lcps_ASTAR_742/instance", instance_bin_file_path)
                         panoptic_bin_file_path = lidar_token + '_panoptic.npz'
                         panoptic_bin_file_path = os.path.join("panoptic_val_preds/panoptic/val", panoptic_bin_file_path)
-                        # save sematic val results
+                        
+                        # save sematic and instance val results
                         # since nuscenes val set requires output 1-16
                         sem_val_labels %= 17
                         lidarseg = np.copy(sem_val_labels)
                         lidarseg[lidarseg == 0] = np.random.choice(16) + 1 ## Que ? 对于0号noise, val里并没要求提交，所以随机赋值是否合理？
-
-                        np.array(lidarseg).astype(np.uint8).tofile(lidarseg_bin_file_path)
-
+                        
                         # save panoptic val results
                         inst_val_labels = (panoptic >> 16) % 1000
                         panoptic_val_labels = sem_val_labels * 1000 + inst_val_labels
                         panoptic_val_labels[sem_val_labels == 0] = 0
                         panoptic_val_labels[sem_val_labels >10] = sem_val_labels[sem_val_labels >10] * 1000
                         np.savez_compressed(panoptic_bin_file_path, data=panoptic_val_labels.astype(np.uint16))
+                        
+                        np.save(lidarseg_bin_file_path, lidarseg.astype(np.uint8))
+                        np.save(instance_bin_file_path, inst_val_labels.astype(np.uint16))
+                        
                     else:
                         raise NotImplementedError   
                 
             pbar_val.update(1)
-            
-            ######################################################################################################
-            # FPS: method-2
-            t3 = time.time()
-            if 'post_time' not in time_list:
-                time_list['post_time'] = []
-            time_list['post_time'].append(t3 - t2)
-            ######################################################################################################
-            
             # if i_iter_val==10:
             #     break
             del val_dict
