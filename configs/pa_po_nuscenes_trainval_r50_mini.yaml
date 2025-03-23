@@ -13,7 +13,7 @@ dataset:
     inst_aug:
         if_use: False
         aug_type: contmix
-        inst_pkl_path: ./data/nuscenes/inst_database_train_info.pkl
+        inst_pkl_path: 
         inst_trans: True # random translation for contmix
         inst_rotate: True
         inst_flip: True

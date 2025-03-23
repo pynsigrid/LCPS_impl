@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: impl",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/train_pie.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                // python -m torch.distributed.launch --nproc_per_node=1 
+                // train.py \
+                "-c",
+                "configs/pa_po_nuscenes_trainval_r50_pie_mini.yaml",
+                "-l",
+                "nusc_debug_pie_0322.log"
+            ],
+            "python": "/home/yining/anaconda3/envs/p3former/bin/python",
+            "env":{
+                "CUDA_VISIBLE_DEVICES":"0",
+                "CUDA_LAUNCH_BLOCKING":"1"
+        }
+    },
+    ]
+}

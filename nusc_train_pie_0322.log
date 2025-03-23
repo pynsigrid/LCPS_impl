@@ -1,0 +1,142 @@
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': False, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [6], 'pitch_angles': [-10, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [6], 'pitch_angles': [-20, 20]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [6], 'pitch_angles': [-20, 20]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+epoch: 1   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10]}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10], 'use_polar': True, 'polar_mix_prob': 0.4, 'instance_classes': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'swap_ratio': 0.5, 'rotate_paste_ratio': 0.5}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10], 'use_polar': True, 'polar_mix_prob': 0.4, 'instance_classes': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'swap_ratio': 0.5, 'rotate_paste_ratio': 0.5}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+epoch: 1   lr: 0.00400
+
+{'dataset': {'name': 'nuscenes', 'version': 'v1.0-mini', 'path': './data/nuscenes_mini', 'sample_pkl_path': './data/nuscenes/pkl_files_LCPS', 'rotate_aug': True, 'flip_aug': True, 'max_volume_space': [50, 3.1415926, 3], 'min_volume_space': [0, -3.1415926, -5], 'gt_generator': {'sigma': 5}, 'grid_size': [480, 360, 32], 'pie_aug': {'use_laser': True, 'laser_mix_prob': 0.1, 'num_areas': [3, 4, 5, 6], 'pitch_angles': [-30, 10], 'use_polar': True, 'polar_mix_prob': 0.4, 'instance_classes': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'swap_ratio': 0.5, 'rotate_paste_ratio': 0.5}, 'num_worker': 2, 'min_points': 15}, 'model': {'pix_fusion': True, 'pix_fusion_path': './checkpoints/resnet18-5c106cde.pth', 'use_sara': True, 'use_att': True, 'model_load_path': 'nusc_79.8.pt', 'model_save_path': './nu_debug_0315.pt', 'train_batch_size': 1, 'val_batch_size': 1, 'learning_rate': 0.004, 'LR_MILESTONES': [100, 150, 200], 'LR_GAMMA': 0.5, 'check_iter': 4000, 'max_epoch': 300, 'post_proc': {'threshold': 0.1, 'nms_kernel': 5, 'top_k': 100}, 'center_loss': 'MSE', 'offset_loss': 'L1', 'center_loss_weight': 100, 'offset_loss_weight': 10}}
+epoch: 0   lr: 0.00400
+
+epoch: 1   lr: 0.00400
+
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :   0.00%    0.00%    0.00%    0.00%
+                 bus :   0.00%    0.00%    0.00%    0.00%
+                 car :   4.23%   61.30%    6.90%   40.47%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :   0.00%    0.00%    0.00%    0.00%
+          pedestrian :   0.00%    0.00%    0.00%    0.78%
+        traffic_cone :   0.00%    0.00%    0.00%    0.00%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :   0.00%    0.00%    0.00%    0.00%
+   driveable_surface :  76.24%   77.20%   98.77%   76.38%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :   0.00%    0.00%    0.00%    4.90%
+             terrain :   0.00%    0.00%    0.00%    5.54%
+             manmade :  33.58%   67.99%   49.38%   50.73%
+          vegetation :   0.00%    0.00%    0.00%   20.12%
+PQ 7.1  PQ_dagger  9.3  SQ 12.9  RQ 9.7  |  PQ_th 0.4  SQ_th 6.1  RQ_th 0.7  |  PQ_st 18.3  SQ_st 24.2  RQ_st 24.7  |  mIoU 12.4
+Current val PQ is 7.1 while the best val PQ is 7.1
+Current val miou is 12.4
+epoch 1 iter    80, avg_loss: 14.2, semantic loss: 2.1, center loss: 6.3, offset loss: 0.5, instmap loss: 2.4, pix loss: 2.8
+
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 0.00%
+bus : 0.00%
+car : 43.31%
+construction_vehicle : 0.00%
+motorcycle : 0.00%
+pedestrian : 1.69%
+traffic_cone : 0.00%
+trailer : 0.00%
+truck : 0.01%
+driveable_surface : 76.68%
+other_flat : 0.00%
+sidewalk : 4.92%
+terrain : 5.56%
+manmade : 50.49%
+vegetation : 20.10%
+Current val miou is 12.7
+epoch: 2   lr: 0.00400
+
+Validation per class PQ, SQ, RQ and IoU: 
+             barrier :   0.00%    0.00%    0.00%    0.00%
+             bicycle :   0.00%    0.00%    0.00%    0.00%
+                 bus :   0.00%    0.00%    0.00%    0.00%
+                 car :  12.80%   67.00%   19.11%   59.74%
+construction_vehicle :   0.00%    0.00%    0.00%    0.00%
+          motorcycle :   0.00%    0.00%    0.00%    0.00%
+          pedestrian :   0.00%    0.00%    0.00%    0.07%
+        traffic_cone :   0.00%    0.00%    0.00%    0.00%
+             trailer :   0.00%    0.00%    0.00%    0.00%
+               truck :   0.00%    0.00%    0.00%    0.20%
+   driveable_surface :  81.32%   81.32%  100.00%   80.83%
+          other_flat :   0.00%    0.00%    0.00%    0.00%
+            sidewalk :   0.00%    0.00%    0.00%    0.69%
+             terrain :   9.68%   55.25%   17.52%   40.91%
+             manmade :  21.05%   56.84%   37.04%   44.40%
+          vegetation :  19.70%   61.39%   32.10%   42.78%
+PQ 9.0  PQ_dagger  16.7  SQ 20.1  RQ 12.9  |  PQ_th 1.3  SQ_th 6.7  RQ_th 1.9  |  PQ_st 22.0  SQ_st 42.5  RQ_st 31.1  |  mIoU 16.9
+Current val PQ is 9.0 while the best val PQ is 9.0
+Current val miou is 16.9
+epoch 2 iter    80, avg_loss: 8.2, semantic loss: 1.6, center loss: 1.8, offset loss: 0.4, instmap loss: 1.5, pix loss: 2.8
+
+Validation per class iou: 
+barrier : 0.00%
+bicycle : 0.00%
+bus : 0.41%
+car : 59.41%
+construction_vehicle : 0.00%
+motorcycle : 0.05%
+pedestrian : 0.31%
+traffic_cone : 0.00%
+trailer : nan%
+truck : 1.31%
+driveable_surface : 80.80%
+other_flat : 0.00%
+sidewalk : 0.69%
+terrain : 40.92%
+manmade : 44.26%
+vegetation : 42.71%
+Current val miou is 18.1
