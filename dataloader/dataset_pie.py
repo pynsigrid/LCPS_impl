@@ -22,14 +22,14 @@ class Nuscenes_pt_ial(data.Dataset):
 
         if version == 'v1.0-mini':
             if split == 'train':
-                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_val_mini_ial.pkl")
+                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_train_mini_ial.pkl")
             elif split == 'val':
                 imageset = os.path.join(sample_pkl_path, "nuscenes_infos_val_mini_ial.pkl")
         elif version == 'v1.0-trainval':
             if split == 'train':
-                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_train.pkl")
+                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_train_ial.pkl")
             elif split == 'val':
-                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_val.pkl")
+                imageset = os.path.join(sample_pkl_path, "nuscenes_infos_val_ial.pkl")
         elif version == 'v1.0-test':
             imageset = os.path.join(sample_pkl_path, "nuscenes_infos_test.pkl")
         else:
